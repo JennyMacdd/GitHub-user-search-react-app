@@ -12,7 +12,14 @@ type myState = {
 }
 
 type userData = {
-    url: string
+    login: string,
+    avatar_url: string,
+    url: string,
+    name: string,
+    company: string,
+    blog: string,
+    location: string,
+    email: string
 }
 
 class SearchComponent extends React.Component<myProps, myState> {
@@ -20,7 +27,16 @@ class SearchComponent extends React.Component<myProps, myState> {
         super(props);
         this.state = {
             username: '',
-            userData: { url: ''}
+            userData: {
+                login: 'octocat',
+                avatar_url: 'https://github.com/images/error/octocat_happy.gif',
+                url: 'https://api.github.com/users/octocat',
+                name: 'monalisa octocat',
+                company: 'GitHub',
+                blog: 'https://github.com/blog',
+                location: 'San Francisco',
+                email: 'octocat@github.com'
+            }
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -38,7 +54,7 @@ class SearchComponent extends React.Component<myProps, myState> {
             <div className="searchComponent">
                 <input type="text" placeholder="Enter a username" value={this.state.username} onChange={this.handleChange} />
                 <input type="submit" value="Submit" onClick={this.handleSubmit} />
-                <UserComponent userData={this.state.userData} />
+                {this.state.userData.login ? <UserComponent userData={this.state.userData} /> : <div>No user was found.</div>}
             </div>
         )
     }
