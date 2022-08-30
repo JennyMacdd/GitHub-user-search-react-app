@@ -19,7 +19,9 @@ type userData = {
     company: string,
     blog: string,
     location: string,
-    email: string
+    email: string,
+    bio: string,
+    twitter_username: string
 }
 
 class SearchComponent extends React.Component<myProps, myState> {
@@ -29,13 +31,15 @@ class SearchComponent extends React.Component<myProps, myState> {
             username: '',
             userData: {
                 login: 'octocat',
-                avatar_url: 'https://github.com/images/error/octocat_happy.gif',
+                avatar_url: 'https://avatars.githubusercontent.com/u/583231?v=4',
                 url: 'https://api.github.com/users/octocat',
-                name: 'monalisa octocat',
-                company: 'GitHub',
-                blog: 'https://github.com/blog',
+                name: 'The Octocat',
+                company: '@github',
+                blog: 'https://github.blog',
                 location: 'San Francisco',
-                email: 'octocat@github.com'
+                email: '',
+                bio: '',
+                twitter_username: ''
             }
         };
         this.handleChange = this.handleChange.bind(this);
