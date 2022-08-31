@@ -20,10 +20,16 @@
                 border: none;
                 height: inherit;
                 font-family: monospace;
-                width: 80%;
+                width: 70%;
+                padding-left: 10px;
 
                 &::-webkit-input-placeholder {
                     color: white;
+                }
+
+                &:active, &:focus, &:visited {
+                    color: white;
+                    outline: none;
                 }
             }
 
@@ -35,6 +41,10 @@
                 border: none;
                 border-radius: 8px;
                 width: 80px;
+
+                &:hover {
+                    opacity: 0.5;
+                }
             }
         }     
     }
@@ -46,7 +56,7 @@
         margin-left: 0;
         margin-right: 0;
 
-        img {
+        .userAvatarImage {
             width: 100px;
             border-radius: 100%;
         }
@@ -57,13 +67,16 @@
             .userName {
                 color: white;
                 font-family: monospace;
-                font-size: 25px;
+                font-size: 26px;
                 margin-bottom: 0;
+                line-height: 38px;
             }
 
             .userLogin {
                 font-family: monospace;
                 color: #0079FF;
+                font-size: 16px;
+                line-height: 24px;
             }
 
             .userNoBio {
@@ -82,23 +95,39 @@
 
                 .userNumberTitle {
                     margin-bottom: 0;
+                    font-size: 13px;
                 }
 
                 .userNumberDatas {
                     font-weight: bold;
                 }
             }
-            
+
             .linksFirstRow {
                 color: white;
                 font-family: monospace;
             }
+
+            .userLocationIcon, .userLinkIcon, .userCompanyIcon, .userTwitterIcon {
+                height: 20px;
+                width: 40px;
+            }
+
+            .userLocation, .userBlog, .userNoBlog, .userNoLocation, .userCompany, .userNoCompany, .userTwitter, .userNoTwitter {
+                padding: 0;
+            }
+
             .linksSecondRow {
                 font-family: monospace;
                 margin-bottom: 20px;
+            }
 
-                a {
-                    color: white;
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
                 }
             }
 

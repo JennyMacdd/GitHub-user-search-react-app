@@ -1,6 +1,7 @@
 import React from 'react';
 import UserComponent from './userComponent';
 import { AppService } from '../services/app.service';
+import searchIcon from '../icon-search.svg';
 
 type myProps = {
 
@@ -61,6 +62,7 @@ class SearchComponent extends React.Component<myProps, myState> {
         return (
             <div className="searchComponent">
                 <div className="searchBar">
+                    <img src={searchIcon} />
                     <input type="text" placeholder="Search GitHub username..." value={this.state.username} onChange={this.handleChange} />
                     <input type="submit" value="Search" onClick={this.handleSubmit} />
                 </div>

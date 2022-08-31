@@ -1,4 +1,8 @@
 import React from 'react';
+import locationIcon from '../icon-location.svg'
+import linkIcon from '../icon-website.svg'
+import companyIcon from '../icon-company.svg'
+import twitterIcon from '../icon-twitter.svg'
 
 type myProps = {
     userData: userData
@@ -31,7 +35,7 @@ class UserComponent extends React.Component<myProps, myState> {
         return (
             <div className="userSection row">
                 <div className="userAvatar col-sm-4">
-                    <img src={this.props.userData.avatar_url} />
+                    <img className="userAvatarImage" src={this.props.userData.avatar_url} />
                 </div>
                 <div className="col-sm-8 textSection">
                     {this.props.userData.name ?
@@ -59,30 +63,45 @@ class UserComponent extends React.Component<myProps, myState> {
                     </div>
                     <div className="linksFirstRow row">
                         <div className="userLocationContainer col-sm-6">
-                            {this.props.userData.location ?
-                                <p className="userLocation">{this.props.userData.location}</p> :
-                                <p className="userNoLocation blurred">Not Available</p>
-                            }
+                            <div className="row">
+                                <img className="userLocationIcon col-sm-3" src={locationIcon} />
+                                {this.props.userData.location ?
+                                    <p className="userLocation col-sm-9">{this.props.userData.location}</p> :
+                                    <p className="userNoLocation blurred col-sm-9">Not Available</p>
+                                }
+                            </div>
+                            
                         </div>
                         <div className="userTwitterContainer col-sm-6">
-                            {this.props.userData.twitter_username ?
-                                <p><a className="userTwitter" href={"https://twitter.com/" + (this.props.userData.twitter_username).replace('@', '')}>{this.props.userData.twitter_username}</a></p> :
-                                <p className="userNoTwitter blurred">Not Available</p>
-                            }
+                            <div className="row">
+                                <img className="userTwitterIcon col-sm-3" src={twitterIcon} />
+                                {this.props.userData.twitter_username ?
+                                    <a className="userTwitter col-sm-9" href={"https://twitter.com/" + (this.props.userData.twitter_username).replace('@', '')}>{this.props.userData.twitter_username}</a> :
+                                    <p className="userNoTwitter blurred col-sm-9">Not Available</p>
+                                }
+                            </div>
                         </div>
                     </div>
                     <div className="linksSecondRow row">
                         <div className="userBlogContainer col-sm-6">
-                            {this.props.userData.blog ?
-                                <p><a className="userBlog" href={this.props.userData.blog}>{this.props.userData.blog}</a></p> :
-                                <p className="userNoBlog blurred">Not Available</p>
-                            }
+                            <div className="row">
+                                <img className="userLinkIcon col-sm-3" src={linkIcon} />
+                                {this.props.userData.blog ?
+                                    <a className="userBlog col-sm-9" href={this.props.userData.blog}>{this.props.userData.blog}</a> :
+                                    <a className="userNoBlog blurred col-sm-9">Not Available</a>
+                                }
+                            </div>
+                            
                         </div>
                         <div className="userCompanyContainer col-sm-6">
-                            {this.props.userData.company ?
-                                <p><a className="userCompany" href={"https://github.com/" + (this.props.userData.company).replace('@', '')}>{this.props.userData.company}</a></p> :
-                                <p className="userNoCompany blurred">Not Available</p>
-                            }
+                            <div className="row">
+                                <img className="userCompanyIcon col-sm-3" src={companyIcon} />
+                                {this.props.userData.company ?
+                                    <a className="userCompany col-sm-9" href={"https://github.com/" + (this.props.userData.company).replace('@', '')}>{this.props.userData.company}</a> :
+                                    <a className="userNoCompany blurred col-sm-9">Not Available</a>
+                                }
+                            </div>
+                            
                         </div>
                     </div> 
                 </div>
