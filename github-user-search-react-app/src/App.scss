@@ -1,0 +1,113 @@
+.App {
+    text-align: center;
+    background-color: #141d2f;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .searchComponent {
+        width: 60%;
+        margin: 0 auto;
+
+        .searchBar {
+            width: 100%;
+            background-color: #1e2a47;
+            height: 50px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+
+            input[type="text"] {
+                background: none;
+                border: none;
+                height: inherit;
+                font-family: monospace;
+                width: 80%;
+
+                &::-webkit-input-placeholder {
+                    color: white;
+                }
+            }
+
+            input[type="submit"] {
+                height: 70%;
+                font-family: monospace;
+                background-color: #0079FF;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                width: 80px;
+            }
+        }     
+    }
+
+    .userSection {
+        background-color: #1e2a47;
+        border-radius: 8px;
+        padding-top: 30px;
+        margin-left: 0;
+        margin-right: 0;
+
+        img {
+            width: 100px;
+            border-radius: 100%;
+        }
+
+        .textSection {
+            text-align: left;
+
+            .userName {
+                color: white;
+                font-family: monospace;
+                font-size: 25px;
+                margin-bottom: 0;
+            }
+
+            .userLogin {
+                font-family: monospace;
+                color: #0079FF;
+            }
+
+            .userNoBio {
+                color: white;
+                font-family: monospace;
+            }
+
+            .userNumbersContainer {
+                background-color: #141d2f;
+                border-radius: 8px;
+                color: white;
+                font-family: monospace;
+                padding-top: 10px;
+                padding-left: 10px;
+                margin-bottom: 20px;
+
+                .userNumberTitle {
+                    margin-bottom: 0;
+                }
+
+                .userNumberDatas {
+                    font-weight: bold;
+                }
+            }
+            
+            .linksFirstRow {
+                color: white;
+                font-family: monospace;
+            }
+            .linksSecondRow {
+                font-family: monospace;
+                margin-bottom: 20px;
+
+                a {
+                    color: white;
+                }
+            }
+
+            .blurred {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+
+

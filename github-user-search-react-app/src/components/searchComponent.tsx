@@ -14,14 +14,15 @@ type myState = {
 type userData = {
     login: string,
     avatar_url: string,
-    url: string,
     name: string,
     company: string,
     blog: string,
     location: string,
-    email: string,
     bio: string,
-    twitter_username: string
+    twitter_username: string,
+    public_repos: number,
+    followers: number,
+    following: number
 }
 
 class SearchComponent extends React.Component<myProps, myState> {
@@ -32,14 +33,15 @@ class SearchComponent extends React.Component<myProps, myState> {
             userData: {
                 login: 'octocat',
                 avatar_url: 'https://avatars.githubusercontent.com/u/583231?v=4',
-                url: 'https://api.github.com/users/octocat',
                 name: 'The Octocat',
                 company: '@github',
                 blog: 'https://github.blog',
                 location: 'San Francisco',
-                email: '',
                 bio: '',
-                twitter_username: ''
+                twitter_username: '',
+                public_repos: 8,
+                followers: 6753,
+                following: 9
             }
         };
         this.handleChange = this.handleChange.bind(this);
@@ -53,11 +55,15 @@ class SearchComponent extends React.Component<myProps, myState> {
         this.setState({ userData: getCurrentUser })
     }
 
+
+
     render() {
         return (
             <div className="searchComponent">
-                <input type="text" placeholder="Enter a username" value={this.state.username} onChange={this.handleChange} />
-                <input type="submit" value="Submit" onClick={this.handleSubmit} />
+                <div className="searchBar">
+                    <input type="text" placeholder="Search GitHub username..." value={this.state.username} onChange={this.handleChange} />
+                    <input type="submit" value="Search" onClick={this.handleSubmit} />
+                </div>
                 {this.state.userData.login ? <UserComponent userData={this.state.userData} /> : <div>No user was found.</div>}
             </div>
         )
