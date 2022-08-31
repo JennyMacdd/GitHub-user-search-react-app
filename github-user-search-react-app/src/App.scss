@@ -1,11 +1,10 @@
 .App {
     text-align: center;
     background-color: #141d2f;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 200px 0;
 
     .searchComponent {
-        width: 60%;
+        width: 700px;
         margin: 0 auto;
 
         .searchBar {
@@ -20,7 +19,7 @@
                 border: none;
                 height: inherit;
                 font-family: monospace;
-                width: 70%;
+                width: 80%;
                 padding-left: 10px;
 
                 &::-webkit-input-placeholder {
@@ -52,9 +51,8 @@
     .userSection {
         background-color: #1e2a47;
         border-radius: 8px;
-        padding-top: 30px;
-        margin-left: 0;
-        margin-right: 0;
+        padding: 30px 0;
+        margin: auto 0;
 
         .userAvatarImage {
             width: 100px;
@@ -103,23 +101,18 @@
                 }
             }
 
-            .linksFirstRow {
+            .linksRow {
                 color: white;
                 font-family: monospace;
             }
 
-            .userLocationIcon, .userLinkIcon, .userCompanyIcon, .userTwitterIcon {
+            .userIcon {
                 height: 20px;
                 width: 40px;
             }
 
-            .userLocation, .userBlog, .userNoBlog, .userNoLocation, .userCompany, .userNoCompany, .userTwitter, .userNoTwitter {
+            .userLinksText {
                 padding: 0;
-            }
-
-            .linksSecondRow {
-                font-family: monospace;
-                margin-bottom: 20px;
             }
 
             a {

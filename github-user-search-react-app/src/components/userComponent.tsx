@@ -61,44 +61,44 @@ class UserComponent extends React.Component<myProps, myState> {
                             <p className="col-sm-4 userNumberData">{this.props.userData.following}</p>
                         </div>
                     </div>
-                    <div className="linksFirstRow row">
+                    <div className="linksRow row">
                         <div className="userLocationContainer col-sm-6">
                             <div className="row">
-                                <img className="userLocationIcon col-sm-3" src={locationIcon} />
+                                <img className="userIcon col-sm-3" src={locationIcon} />
                                 {this.props.userData.location ?
-                                    <p className="userLocation col-sm-9">{this.props.userData.location}</p> :
-                                    <p className="userNoLocation blurred col-sm-9">Not Available</p>
+                                    <p className="userLinksText col-sm-9">{this.props.userData.location}</p> :
+                                    <p className="userLinksText blurred col-sm-9">Not Available</p>
                                 }
                             </div>
                             
                         </div>
                         <div className="userTwitterContainer col-sm-6">
                             <div className="row">
-                                <img className="userTwitterIcon col-sm-3" src={twitterIcon} />
+                                <img className="userIcon col-sm-3" src={twitterIcon} />
                                 {this.props.userData.twitter_username ?
-                                    <a className="userTwitter col-sm-9" href={"https://twitter.com/" + (this.props.userData.twitter_username).replace('@', '')}>{this.props.userData.twitter_username}</a> :
-                                    <p className="userNoTwitter blurred col-sm-9">Not Available</p>
+                                    <a className="userLinksText col-sm-9" href={"https://twitter.com/" + (this.props.userData.twitter_username).replace('@', '')}>{this.props.userData.twitter_username}</a> :
+                                    <p className="userLinksText blurred col-sm-9">Not Available</p>
                                 }
                             </div>
                         </div>
                     </div>
-                    <div className="linksSecondRow row">
+                    <div className="linksRow row">
                         <div className="userBlogContainer col-sm-6">
                             <div className="row">
-                                <img className="userLinkIcon col-sm-3" src={linkIcon} />
+                                <img className="userIcon col-sm-3" src={linkIcon} />
                                 {this.props.userData.blog ?
-                                    <a className="userBlog col-sm-9" href={this.props.userData.blog}>{this.props.userData.blog}</a> :
-                                    <a className="userNoBlog blurred col-sm-9">Not Available</a>
+                                    <a className="userLinksText col-sm-9" href={this.props.userData.blog}>{this.props.userData.blog}</a> :
+                                    <a className="userLinksText blurred col-sm-9">Not Available</a>
                                 }
                             </div>
                             
                         </div>
                         <div className="userCompanyContainer col-sm-6">
                             <div className="row">
-                                <img className="userCompanyIcon col-sm-3" src={companyIcon} />
+                                <img className="userIcon col-sm-3" src={companyIcon} />
                                 {this.props.userData.company ?
-                                    <a className="userCompany col-sm-9" href={"https://github.com/" + (this.props.userData.company).replace('@', '')}>{this.props.userData.company}</a> :
-                                    <a className="userNoCompany blurred col-sm-9">Not Available</a>
+                                    <a className="userLinksText col-sm-9" href={"https://github.com/" + (this.props.userData.company).replace('@', '')}>{this.props.userData.company}</a> :
+                                    <a className="userLinksText blurred col-sm-9">Not Available</a>
                                 }
                             </div>
                             
